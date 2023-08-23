@@ -1,7 +1,5 @@
 window.stylus = (function(){
-        if (window.stylus){
-            return;
-        }
+        if (window.stylus)return;
         const keywords = {
             canvas:function(program,args){
                 const canvas = document.getElementById(args[0].value);
@@ -307,4 +305,6 @@ window.stylus = (function(){
                 run(script.text);
             });
         },false);
+        
+        return 1;
     })();

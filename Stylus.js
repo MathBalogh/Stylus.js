@@ -1,5 +1,4 @@
-window.stylus = (function(){
-        if (window.stylus)return;
+const stylus = (function(){
         const keywords = {
             canvas:function(program,args){
                 const canvas = document.getElementById(args[0].value);
@@ -265,7 +264,7 @@ window.stylus = (function(){
                 return statements;
             };
         })();
-        function run(text){
+        const run = function(text){
             let instructions;
             try{
                 instructions = parser(lexer(text));
